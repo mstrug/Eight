@@ -1,0 +1,46 @@
+; Installation file for Eight application
+;
+; This is an auto-generated PKG file by Carbide.
+; This file uses variables specific to Carbide builds that will not work
+; on command-line builds. If you want to use this generated PKG file from the
+; command-line tools you will need to modify the variables with the appropriate
+; values: $(EPOCROOT), $(PLATFORM), $(TARGET)
+;
+
+;Languages
+&EN
+
+; UID is the app's UID
+#{"Eight free"},(0x2006AF95),1,0,0,TYPE = SA
+
+;Unique Vendor name
+:"Michal Strug"
+
+;Localised Vendor name
+%{"Michal Strug"}
+
+;Supports Symbian ^3
+[0x20022E6D], 0, 0, 0, {"Series60ProductID"}  ; S3
+
+
+; Files to install
+
+"$(EPOCROOT)Epoc32\release\$(PLATFORM)\$(TARGET)\Eight_0x2006AF95.exe"		-"!:\sys\bin\Eight_0x2006AF95.exe"
+
+"$(EPOCROOT)Epoc32\data\z\resource\apps\Eight_0x2006AF95.rsc"			-"!:\resource\apps\Eight_0x2006AF95.rsc"
+"$(EPOCROOT)Epoc32\data\z\resource\apps\Eight_0x2006AF95.mif"			-"!:\resource\apps\Eight_0x2006AF95.mif"
+"$(EPOCROOT)Epoc32\data\z\private\10003a3f\apps\Eight_0x2006AF95_reg.rsc"		-"!:\private\10003a3f\import\apps\Eight_0x2006AF95_reg.rsc"
+
+"$(EPOCROOT)Epoc32\winscw\c\private\2006AF95\eight.sge"           -"!:\private\2006AF95\eight.sge"
+
+
+; remove 0x from the UID !
+"..\sis\backup_registration.xml"						-"!:\private\2006AF95\backup_registration.xml"
+
+
+
+"..\gfx\logo.mbm"  -"!:\private\2006AF95\logo.mbm"
+"..\gfx\go.mbm"  -"!:\private\2006AF95\go.mbm"
+"..\data\ua.htm"  -"!:\private\2006AF95\ua.htm"
+
+

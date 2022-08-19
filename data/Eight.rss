@@ -1,0 +1,168 @@
+/*
+ ============================================================================
+  Name	      : Eight.rss
+  Author      : Michal Strug
+  Company     : 
+  Version     : 1.0.0
+  Copyright   : Copyright (c) 2022 Michal Strug. All rights reserved.
+  Description : This file contains all the resources for the Eight.
+ ============================================================================
+ */
+
+//  RESOURCE IDENTIFIER
+NAME EIGH	// 4 letter ID
+
+//  INCLUDES
+#include <eikon.rh>
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <appinfo.rh>
+#include "Eight.rls"
+//INNERACTIVE::BEGIN
+#include "InnerActiveAd.hrh"
+// INNERACTIVE::BEGIN
+//#define ECmdOpenAdDlg = 0x6003;
+//#define ECmdOpenFsAdDlg = 0x6004;
+//#define ECmdReloadAd = 0x6005;
+//#define ECmdAdDlg_btnSkip = 0x6006;
+//#define ECmdAdDlg_btnOpenAd = 0x6007;
+//#define ECmdInitAdModule = 0x6008;
+// INNERACTIVE::END
+//INNERACTIVE::END
+
+//  RESOURCE DEFINITIONS
+// -----------------------------------------------------------------------------
+//
+//	Define the resource file signature
+//	This resource should be empty.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE
+	{
+	}
+
+// -----------------------------------------------------------------------------
+//
+//	Default Document Name
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF r_default_document_name
+	{
+	buf="Eight free";
+	}
+
+// -----------------------------------------------------------------------------
+//
+//	Define default menu and CBA key.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO
+	{
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_localisable_app_info
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE LOCALISABLE_APP_INFO r_localisable_app_info
+	{
+	short_caption = qtn_caption_string;
+	caption_and_icon = 
+	CAPTION_AND_ICON_INFO
+		{
+		caption = qtn_caption_string_wide;
+
+		number_of_icons = 1;
+		icon_file = qtn_loc_icon_file_1;
+		};
+	}
+
+
+
+
+//INNERACTIVE::BEGIN
+STRUCT CUSTOMCONTROL
+{
+    LTEXT txt;
+}
+
+RESOURCE CBA r_ia_softkeys
+{
+    buttons =
+    {
+    CBA_BUTTON 
+        {
+            id = EAknSoftkeyEmpty; 
+            txt = "";
+        },
+    CBA_BUTTON 
+        {
+            id = 0x6003; //ECmdAdDlg_btnOpenAd; 
+            txt = "Go"; 
+        }
+    };
+}
+
+RESOURCE CBA r_ia_softkeys_skip
+{
+    buttons =
+    {
+    CBA_BUTTON 
+        {
+            id = 0x6004; //ECmdAdDlg_btnSkip; 
+            txt = "Skip";
+        },
+    CBA_BUTTON 
+        {
+            id = 0x6005; //ECmdAdDlg_btnOpenAd; 
+            txt = "Go"; 
+        }
+    };
+}
+
+RESOURCE DIALOG r_ad_dialog
+{   
+    flags = EAknDialogGenericFullScreen; 
+    buttons = r_ia_softkeys;
+    items =
+        {
+        DLG_LINE
+            {
+                type = KIaCustomDialogContainer;
+                id = KIaCustomDialogContainerId;
+                control = CUSTOMCONTROL
+                {
+                    txt = "";
+                };
+            }
+        };
+}
+
+RESOURCE DIALOG r_fs_ad_dialog
+{   
+    flags = EAknDialogGenericFullScreen; 
+    buttons = r_ia_softkeys;
+    items =
+        {
+        DLG_LINE
+            {
+                type = KIaFullScreenDialogContainer;
+                id = KIaFullScreenDialogContainerId;
+                control = CUSTOMCONTROL
+                {
+                    txt = "";
+                };
+            }
+        };
+}
+//INNERACTIVE::END
+
+
+
+
+// End of File

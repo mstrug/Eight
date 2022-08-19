@@ -1,0 +1,45 @@
+/*
+ ============================================================================
+  Name	      : Eight.rls
+  Author      : Michal Strug
+  Company     : 
+  Version     : 1.0.0
+  Copyright   : Copyright (c) 2022 Michal Strug. All rights reserved.
+  Description : This file contains all the resources for the Eight.
+ ============================================================================
+ */
+
+//  LOCALISATION STRINGS
+
+
+#include "EightCompilationSettings.h"
+
+// Caption string for app.
+#ifdef EIGHT_PREMIUM
+#define qtn_caption_string "Eight"
+#define qtn_caption_string_wide "Eight" // string on top of the screen
+#else
+#define qtn_caption_string "Eight free"
+#define qtn_caption_string_wide "Eight free" // string on top of the screen
+#endif
+
+// Resource file
+#ifdef EIGHT_PREMIUM
+#define qtn_loc_resource_file_1 "\\resource\\apps\\Eight_0x2006AF94"
+#else
+#define qtn_loc_resource_file_1 "\\resource\\apps\\Eight_0x2006AF95"
+#endif
+
+// Icon file
+#ifdef EIGHT_PREMIUM
+#define qtn_loc_icon_file_1 "\\resource\\apps\\Eight_0x2006AF94.mif"
+#else
+#define qtn_loc_icon_file_1 "\\resource\\apps\\Eight_0x2006AF95.mif"
+#endif
+
+
+// Exit item in menu pane
+#define qtn_exit "Exit"
+
+
+// End of File

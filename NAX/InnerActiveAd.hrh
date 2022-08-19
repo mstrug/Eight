@@ -1,0 +1,26 @@
+/*
+ * InnerActiveAd.hrh
+ *
+ *  Created on: Jan 24, 2011
+ *      Author: InnerActive
+ */
+
+#ifndef INNERACTIVEAD_HRH_
+#define INNERACTIVEAD_HRH_
+
+#include <avkon.hrh>
+
+// custom control type in resource file
+enum 
+{
+	KIaCustomDialogContainer = KAknCtLastControlId,
+	KIaFullScreenDialogContainer
+};
+// custom control id in resource file
+enum 
+{
+	KIaCustomDialogContainerId = 0x503,
+	KIaFullScreenDialogContainerId
+};
+
+#endif /* INNERACTIVEAD_HRH_ */

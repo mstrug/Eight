@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!--Generator: Xara Xtreme (www.xara.com), SVG filter version: 1.0.0.13-->
+<svg stroke-width="0.501" stroke-linejoin="bevel" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" overflow="visible" width="56.25pt" height="56.25pt" viewBox="0 0 56.25 56.25">
+ <g id="Document" fill="none" stroke="black" font-family="Times New Roman" font-size="16" transform="scale(1 -1)">
+  <g id="Spread" transform="translate(0 -56.25)">
+   <g id="Layer 1">
+    <g id="Group" stroke-linejoin="miter">
+     <rect x="0.001" y="0.001" width="56.25" height="56.25" stroke-opacity="0.517647" stroke="none"/>
+     <g id="Group_1" stroke="#ffffff">
+      <ellipse rx="8.307" ry="8.308" transform="translate(32.942 33.938) rotate(90)" stroke-width="1.5" stroke-miterlimit="79.8403193612775"/>
+      <g id="Group_2">
+       <path d="M 28.01,28.255 L 20.477,20.005" fill="none" stroke-width="1.5" stroke-miterlimit="79.8403193612775"/>
+       <path d="M 25.01,24.969 L 15,14.005" fill="none" stroke-linecap="round" stroke-width="3" stroke-miterlimit="79.8403193612775"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

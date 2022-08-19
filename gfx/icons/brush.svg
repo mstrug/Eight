@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg stroke-width="0.501" stroke-linejoin="bevel" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" overflow="visible" width="56.25pt" height="56.25pt" viewBox="0 0 56.25 56.25">
+ <g id="Document" fill="none" stroke="black" font-family="Times New Roman" font-size="16" transform="scale(1 -1)">
+  <g id="Spread_1" transform="translate(0 -56.25)">
+    <g id="Group_3">
+     <rect x="0" y="0" width="56.25" height="56.25" stroke="none" stroke-linejoin="miter" stroke-opacity="0.517647"/>
+     <g id="Group_4" stroke-linecap="round" fill="#ffffff">
+      <path d="M 27.077,24.917 L 27.077,29.004 L 42.661,36.604 L 42.661,42.378 L 39.511,42.378" fill="none" stroke="#ffffff" stroke-width="1.125" stroke-linejoin="round" stroke-miterlimit="79.8403193612775"/>
+      <path d="M 25.573,12.022 L 25.572,24.325 C 24.55,24.374 24.573,25.81 25.642,25.821 L 28.571,25.821 C 29.577,25.817 29.578,24.335 28.574,24.324 L 28.574,12.022 C 28.574,11.022 25.573,11.022 25.573,12.022 Z M 14.372,44.977 L 39.851,44.977 C 40.872,43.195 40.792,41.446 39.851,39.728 L 14.372,39.728 C 13.398,41.477 13.255,43.228 14.372,44.977 Z" stroke-linejoin="miter" stroke-width="0.75" stroke="none" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+     </g>
+   </g>
+  </g>
+ </g>
+</svg>

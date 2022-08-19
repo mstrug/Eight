@@ -1,0 +1,24 @@
+/*
+ ============================================================================
+  Name        : bld.inf
+  Author      : Michal Strug
+  Company     : 
+  Version     : 1.0.0
+  Copyright   : Copyright (c) 2022 Michal Strug. All rights reserved.
+  Description : This file provides the information required for building the
+                whole of a Eight.
+ ============================================================================
+ */
+
+
+PRJ_PLATFORMS
+WINSCW GCCE
+
+PRJ_EXPORTS
+..\data\ua.htm \epoc32\winscw\c\data\ua.htm
+
+PRJ_MMPFILES
+gnumakefile icons_scalable_dc.mk
+gnumakefile Icons_scalable_free_dc.mk
+Eight.mmp
+

@@ -1,0 +1,103 @@
+/*
+ ============================================================================
+  Name	      : Eight.mmp
+  Author      : Michal Strug
+  Company     : 
+  Version     : 1.0.0
+  Copyright   : Copyright (c) 2022 Michal Strug. All rights reserved.
+  Description : This is the project specification file for Eight.
+ ============================================================================
+ */
+#include "../inc/EightCompilationSettings.h"
+
+TARGETTYPE exe
+
+#ifdef EIGHT_PREMIUM
+TARGET Eight_0x2006AF94.exe
+UID 0x100039CE 0x2006AF94
+SECUREID 0x2006AF94
+#else
+TARGET Eight_0x2006AF95.exe
+UID 0x100039CE 0x2006AF95
+SECUREID 0x2006AF95
+#endif
+VENDORID 0
+
+LANG SC
+
+
+SOURCEPATH     ..\src
+SOURCE         Eight.cpp
+SOURCE         EightApplication.cpp 
+SOURCE EightTile.cpp EightTileManager.cpp TouchButtonPath.cpp EightTileSpecial.cpp EightPalette.cpp EightTileUi.cpp EightTileUiStatic.cpp EightAppFactory.cpp EightSettings.cpp EightTileUiDynFlip.cpp EightTileUiDynCycle.cpp EightPhotosProvider.cpp EightTileUiDynMosaic.cpp EightContactPhotoLoader.cpp EightMsgBox.cpp TouchButtonText.cpp EightFormWindow.cpp EightFormWindowManager.cpp EightTileManagerFactory.cpp EightTileAppShortcut.cpp EightTileAppPhone.cpp SGEUtilsGPAO.cpp
+SOURCE EightMissedCallCalc.cpp EightTileAppCalendar.cpp EightTileAppMessaging.cpp EightTileAppEmail.cpp EightMessagingInterface.cpp EightWindowTileSettings.cpp EightTileAppWindow.cpp EightWindowAbout.cpp EightWindowHelp.cpp EightWindowSetup.cpp EightWindowColor.cpp TouchControlBase.cpp TouchButtonOnOff.cpp EightTileAppClock.cpp EightTileAppPhotos.cpp TouchButtonRadioGroup.cpp TouchControlStatic.cpp EightPhotosDCIM.cpp EightWindowFR1.cpp EightWindowFR2.cpp EightWindowFR3.cpp EightWindowFR4.cpp EightWindowPremium.cpp
+
+#ifdef EIGHT_PREMIUM
+
+SOURCEPATH     ..\data
+START RESOURCE Eight.rss
+HEADER
+TARGET Eight_0x2006AF94
+TARGETPATH resource\apps
+END //RESOURCE
+
+START RESOURCE Eight_reg.rss
+TARGET Eight_0x2006AF94_reg
+TARGETPATH 	  \private\10003a3f\apps
+END //RESOURCE
+
+#else
+
+SOURCEPATH     ..\data
+START RESOURCE Eight.rss
+HEADER
+TARGET Eight_0x2006AF95
+TARGETPATH resource\apps
+END //RESOURCE
+
+START RESOURCE Eight_reg.rss
+TARGET Eight_0x2006AF95_reg
+TARGETPATH    \private\10003a3f\apps
+END //RESOURCE
+
+#endif
+
+
+USERINCLUDE    ..\inc
+USERINCLUDE    ..\NAX
+SYSTEMINCLUDE  \epoc32\include
+SYSTEMINCLUDE  \epoc32\include\mw
+SYSTEMINCLUDE  \epoc32\include\app
+SYSTEMINCLUDE  \epoc32\include\platform
+SYSTEMINCLUDE  \epoc32\include\platform\app
+SYSTEMINCLUDE  \epoc32\include\platform\mw
+SYSTEMINCLUDE  \epoc32\include\SGE
+SYSTEMINCLUDE  \epoc32\include\systemstartup
+
+LIBRARY		   libopenvg.lib libopenvgu.lib libegl.lib
+LIBRARY            eikcore.lib avkon.lib apparc.lib cone.lib euser.lib estor.lib efsrv.lib bafl.lib ws32.lib bitgdi.lib fbscli.lib hal.lib libgles_cm.lib scdv.lib RemConCoreApi.lib RemConInterfaceBase.lib xmlframework.lib gdi.lib
+LIBRARY            akntouchgesturefw.lib
+LIBRARY            bitmaptransforms.lib imageconversion.lib
+LIBRARY            apgrfx.lib
+LIBRARY  aknskins.lib aknskinsrv.lib aknswallpaperutils.lib aknicon.lib cntmodel.lib etel3rdparty.lib logcli.lib calinterimapi.lib msgs.lib alarmclient.lib alarmshared.lib dscstore.lib edbms.lib eikcoctl.lib goommonitor.lib touchfeedback.lib
+
+// NAX:
+LIBRARY esock.lib http.lib inetprotutil.lib charconv.lib commdb.lib
+LIBRARY centralrepository.lib apmime.lib sysutil.lib
+LIBRARY eikdlg.lib
+LIBRARY browserengine.lib
+LIBRARY connmon.lib cryptospi.lib
+
+STATICLIBRARY	   SGEEgl_staticlib.lib
+STATICLIBRARY	   SGEApplication_staticlib.lib SGEVg_staticLib.lib SGEBitmap_staticlib.lib SGEFile_staticlib.lib SGEUtils_staticlib.lib  SGESecurity_staticlib.lib
+//STATICLIBRARY InnerActiveAdLib.lib
+
+#ifdef ENABLE_ABIV2_MODE
+DEBUGGABLE_UDEBONLY
+#endif
+
+CAPABILITY ReadDeviceData ReadUserData WriteDeviceData WriteUserData SwEvent NetworkServices
+EPOCHEAPSIZE 4000000 16000000
+
+SOURCEPATH ..\src
+SOURCE EightTileAds.cpp SGEUtilsHttpClient.cpp
